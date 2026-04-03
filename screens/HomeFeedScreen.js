@@ -1,4 +1,4 @@
-// screens/HomeFeedScreen.js (Complete Fixed Version)
+// screens/HomeFeedScreen.js (Complete Fixed Version - No Inline Styling)
 import React, { useState, useRef } from 'react';
 import {
   View,
@@ -154,28 +154,28 @@ export default function HomeFeedScreen({ navigation }) {
           style={styles.createPostAction}
           onPress={() => setShowCreatePost(true)}
         >
-          <View style={[styles.actionIconBg, { backgroundColor: '#E7F3FF' }]}>
+          <View style={[styles.actionIconBg, styles.photoIconBg]}>
             <Ionicons name="image-outline" size={22} color={COLORS.primary} />
           </View>
           <Text style={styles.actionLabel}>Photo</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={styles.createPostAction}>
-          <View style={[styles.actionIconBg, { backgroundColor: '#FFE7E7' }]}>
+          <View style={[styles.actionIconBg, styles.videoIconBg]}>
             <Ionicons name="videocam-outline" size={22} color="#FF3B30" />
           </View>
           <Text style={styles.actionLabel}>Video</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={styles.createPostAction}>
-          <View style={[styles.actionIconBg, { backgroundColor: '#E7FFE7' }]}>
+          <View style={[styles.actionIconBg, styles.feelingIconBg]}>
             <Ionicons name="happy-outline" size={22} color="#34C759" />
           </View>
           <Text style={styles.actionLabel}>Feeling</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={styles.createPostAction}>
-          <View style={[styles.actionIconBg, { backgroundColor: '#FFF4E7' }]}>
+          <View style={[styles.actionIconBg, styles.locationIconBg]}>
             <Ionicons name="location-outline" size={22} color="#FF9500" />
           </View>
           <Text style={styles.actionLabel}>Check in</Text>
@@ -277,7 +277,7 @@ export default function HomeFeedScreen({ navigation }) {
       onRequestClose={() => setShowAddStory(false)}
     >
       <View style={styles.modalOverlay}>
-        <View style={[styles.modalContent, { backgroundColor: '#1A1A2E' }]}>
+        <View style={[styles.modalContent, styles.storyModalContent]}>
           <View style={styles.modalHeader}>
             <TouchableOpacity onPress={() => {
               setShowAddStory(false);
@@ -286,7 +286,7 @@ export default function HomeFeedScreen({ navigation }) {
             }}>
               <Ionicons name="close" size={28} color="#FFFFFF" />
             </TouchableOpacity>
-            <Text style={[styles.modalTitle, { color: '#FFFFFF' }]}>Add Story</Text>
+            <Text style={[styles.modalTitle, styles.storyModalTitle]}>Add Story</Text>
             <TouchableOpacity 
               style={[styles.modalPostBtn, (!storyText.trim() && !storyImage) && styles.modalPostBtnDisabled]}
               onPress={handleAddStory}
@@ -317,7 +317,7 @@ export default function HomeFeedScreen({ navigation }) {
           />
           
           <View style={styles.addToPost}>
-            <Text style={[styles.addToPostTitle, { color: '#888' }]}>Add to story</Text>
+            <Text style={[styles.addToPostTitle, styles.storyAddToPostTitle]}>Add to story</Text>
             <View style={styles.addToPostIcons}>
               <TouchableOpacity style={styles.addIconBtn}>
                 <Ionicons name="camera-outline" size={28} color="#FFFFFF" />
@@ -668,6 +668,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  photoIconBg: {
+    backgroundColor: '#E7F3FF',
+  },
+  videoIconBg: {
+    backgroundColor: '#FFE7E7',
+  },
+  feelingIconBg: {
+    backgroundColor: '#E7FFE7',
+  },
+  locationIconBg: {
+    backgroundColor: '#FFF4E7',
+  },
   actionLabel: {
     fontSize: 12,
     color: COLORS.textSecondary,
@@ -705,6 +717,9 @@ const styles = StyleSheet.create({
     padding: 20,
     maxHeight: '90%',
   },
+  storyModalContent: {
+    backgroundColor: '#1A1A2E',
+  },
   modalHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -717,6 +732,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '700',
     color: COLORS.text,
+  },
+  storyModalTitle: {
+    color: '#FFFFFF',
   },
   modalPostBtn: {
     backgroundColor: COLORS.primary,
@@ -787,6 +805,9 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: COLORS.textSecondary,
     marginBottom: 12,
+  },
+  storyAddToPostTitle: {
+    color: '#888',
   },
   addToPostIcons: {
     flexDirection: 'row',

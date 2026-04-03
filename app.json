@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "Telegram Redesign",
+    "slug": "telegram-redesign",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "backgroundColor": "#2AABEE"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.bimp2210.telegramredesign"
+    },
+    "android": {
+      "package": "com.bimp2210.telegramredesign"
+    }
+  }
+}

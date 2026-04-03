@@ -1,4 +1,3 @@
-// components/PostCard.js (Fixed - added TextInput import)
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions, TextInput } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';

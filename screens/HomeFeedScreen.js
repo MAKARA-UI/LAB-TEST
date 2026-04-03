@@ -459,7 +459,7 @@ export default function HomeFeedScreen({ navigation }) {
 
   const renderHeader = () => (
     <View style={styles.header}>
-      <Text style={styles.logo}>Connect</Text>
+      <Text style={styles.logo}>FaceBook</Text>
       <View style={styles.headerIcons}>
         <TouchableOpacity style={styles.iconBtn} onPress={() => setShowSearch(true)}>
           <Ionicons name="search-outline" size={24} color={COLORS.text} />

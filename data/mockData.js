@@ -1,4 +1,3 @@
-// data/mockData.js (Updated with NOTIFICATIONS)
 export const CURRENT_USER = {
   id: 'me',
   name: 'Tseliso Lesolo',

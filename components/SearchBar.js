@@ -1,4 +1,3 @@
-// components/SearchBar.js (Updated)
 import React from 'react';
 import { View, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';

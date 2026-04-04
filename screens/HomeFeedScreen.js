@@ -1,4 +1,3 @@
-// screens/HomeFeedScreen.js (Complete Fixed Version - No Inline Styling)
 import React, { useState, useRef } from 'react';
 import {
   View,

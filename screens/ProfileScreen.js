@@ -1,4 +1,3 @@
-// screens/ProfileScreen.js (Complete with Add Story and Add Post)
 import React, { useState } from 'react';
 import {
   View,
